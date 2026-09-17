@@ -50,16 +50,6 @@ header p {
   color: #dfeaf7;
 }
 
-.language-picker {
-  max-width: 220px;
-  margin: 24px auto 0;
-  text-align: start;
-}
-
-.language-picker .form-label {
-  color: #ffffff;
-}
-
 /* Timeline cards */
 .timeline-wrap {
   overflow-x: auto;
