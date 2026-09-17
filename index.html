@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="auto">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Intel: Sustainability Through the Ages</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" media="print" onload="this.media='all'" />
   <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -24,6 +28,17 @@
         to innovation has shaped a more sustainable future for technology 
         and our planet.
       </p>
+
+      <div class="language-picker">
+        <label for="language-select" class="form-label">Language</label>
+        <select id="language-select" class="form-select" aria-label="Choose a language">
+          <option value="en">English</option>
+          <option value="ar">العربية</option>
+          <option value="he">עברית</option>
+          <option value="fa">فارسی</option>
+          <option value="ur">اردو</option>
+        </select>
+      </div>
     </div>
   </header>
 
@@ -37,7 +52,7 @@
           <h3>Intel Founded</h3>
         </div>
         <div class="card-details">
-          <img src="img/1.jpg" alt="Intel founding era" />
+          <img src="img/1.jpg" alt="Intel founding era" width="500" height="200" decoding="async" />
           <p>
             Robert Noyce and Gordon Moore rename the newly formed company 
             NM Electronics to Intel Corporation, laying the foundation for 
@@ -52,7 +67,7 @@
           <h3>First Microprocessor</h3>
         </div>
         <div class="card-details">
-          <img src="img/2.jpg" alt="First microprocessor era" />
+          <img src="img/2.jpg" alt="First microprocessor era" width="500" height="200" decoding="async" />
           <p>
             Intel debuts the 4004, the world's first commercial microprocessor, 
             igniting the microprocessor revolution and propelling the future 
@@ -67,7 +82,7 @@
           <h3>8086 Processor</h3>
         </div>
         <div class="card-details">
-          <img src="img/3.jpg" alt="8086 processor era" />
+          <img src="img/3.jpg" alt="8086 processor era" width="500" height="200" decoding="async" />
           <p>
             Launch of the 8086 processor, establishing the x86 architecture 
             that drives countless PCs and servers in the modern era.
@@ -81,7 +96,7 @@
           <h3>386 Processor</h3>
         </div>
         <div class="card-details">
-          <img src="img/4.jpg" alt="386 processor era" />
+          <img src="img/4.jpg" alt="386 processor era" width="499" height="200" decoding="async" />
           <p>
             Intel introduces the 386 processor with 32-bit architecture, 
             ushering in a new era of performance and multitasking for 
@@ -96,7 +111,7 @@
           <h3>Peak GHG Emissions</h3>
         </div>
         <div class="card-details">
-          <img src="img/rubaitul-azad-3WhPfoOX888-unsplash.jpg" alt="Environmental impact milestone" />
+          <img src="img/rubaitul-azad-3WhPfoOX888-unsplash.jpg" alt="Environmental impact milestone" width="3280" height="2050" loading="lazy" decoding="async" />
           <p>
             This year marks Intel's highest annual greenhouse gas emissions 
             for operations. Over subsequent years, Intel invests heavily in 
@@ -112,7 +127,7 @@
           <h3>RISE Strategy</h3>
         </div>
         <div class="card-details">
-          <img src="img/brecht-corbeel-q5T423mSuWw-unsplash.jpg" alt="Sustainability strategy timeline" />
+          <img src="img/brecht-corbeel-q5T423mSuWw-unsplash.jpg" alt="Sustainability strategy timeline" width="3840" height="1843" loading="lazy" decoding="async" />
           <p>
             Intel launches its RISE (Responsible, Inclusive, Sustainable, 
             Enabling) strategy and 2030 goals, aiming to drive industry-wide 
@@ -127,7 +142,7 @@
           <h3>Net-Zero By 2040</h3>
         </div>
         <div class="card-details">
-          <img src="img/rubaitul-azad-3WhPfoOX888-unsplash.jpg" alt="Climate goals milestone" />
+          <img src="img/rubaitul-azad-3WhPfoOX888-unsplash.jpg" alt="Climate goals milestone" width="3280" height="2050" loading="lazy" decoding="async" />
           <p>
             Intel announces its commitment to achieve net-zero greenhouse 
             gas emissions (Scope 1 and 2) across its global operations 
@@ -142,7 +157,7 @@
           <h3>Renewable Electricity</h3>
         </div>
         <div class="card-details">
-          <img src="img/brecht-corbeel-q5T423mSuWw-unsplash.jpg" alt="Renewable electricity milestone" />
+          <img src="img/brecht-corbeel-q5T423mSuWw-unsplash.jpg" alt="Renewable electricity milestone" width="3840" height="1843" loading="lazy" decoding="async" />
           <p>
             The company achieves 99% renewable electricity usage worldwide, 
             helping to drastically lower carbon emissions and driving progress 
@@ -157,7 +172,7 @@
           <h3>Sustainability Summit</h3>
         </div>
         <div class="card-details">
-          <img src="img/1.jpg" alt="Sustainability summit era" />
+          <img src="img/1.jpg" alt="Sustainability summit era" width="500" height="200" loading="lazy" decoding="async" />
           <p>
             Intel hosts its first Sustainability Summit, uniting suppliers, 
             government officials, and industry leaders to collaborate on 
@@ -167,6 +182,75 @@
       </article>
     </div>
   </section>
+
+  <!-- Three-column information section -->
+  <section class="info-grid-section py-5" aria-labelledby="information-heading">
+    <div class="container">
+      <h2 id="information-heading" class="timeline-heading mb-4">Learn more</h2>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <article class="info-panel h-100 p-4">
+            <i class="bi bi-megaphone-fill info-icon" aria-hidden="true"></i>
+            <h3 class="h4">Testimonials</h3>
+            <p>
+              "Sustainability is a shared responsibility, and every improvement helps build a better future."
+            </p>
+            <small>Intel sustainability community</small>
+          </article>
+        </div>
+        <div class="col">
+          <article class="info-panel h-100 p-4">
+            <i class="bi bi-graph-up-arrow info-icon" aria-hidden="true"></i>
+            <h3 class="h4">Sustainability information</h3>
+            <p>
+              Learn how Intel is working toward lower emissions, responsible water use, and less waste across its operations.
+            </p>
+            <a class="btn btn-primary read-updates-button" href="#subscription-heading">
+              Read updates <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+            </a>
+          </article>
+        </div>
+        <div class="col">
+          <article class="info-panel h-100 p-4">
+            <i class="bi bi-compass info-icon" aria-hidden="true"></i>
+            <h3 class="h4">More to explore</h3>
+            <p>
+              New stories and milestones will be added here as Intel continues its sustainability journey.
+            </p>
+            <span class="badge text-bg-light">Coming soon</span>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Subscription form -->
+  <footer class="subscription-section py-5" aria-labelledby="subscription-heading">
+    <div class="container">
+      <div class="subscription-panel mx-auto p-4 p-md-5">
+        <div class="row align-items-center g-4">
+          <div class="col-md-6">
+            <h2 id="subscription-heading" class="h3 mb-2">Stay up to date</h2>
+            <p class="mb-0">
+              Subscribe for updates about Intel's sustainability progress and future milestones.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <form class="row g-2" action="#" method="post">
+              <div class="col-sm-8">
+                <label class="form-label" for="subscriber-email">Email address <span aria-hidden="true">(required)</span></label>
+                <input class="form-control" type="email" id="subscriber-email" name="email" placeholder="name@example.com" required />
+              </div>
+              <div class="col-sm-4 d-grid">
+                <button class="btn btn-primary" type="submit">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
   <p>Scroll to view timeline | Hover over cards to learn more!</p>
 </body>
 </html>

@@ -2,12 +2,18 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-image: linear-gradient(rgba(10, 18, 28, 0.55), rgba(10, 18, 28, 0.55)),
-    url("img/brecht-corbeel-q5T423mSuWw-unsplash.jpg");
+  background-image: linear-gradient(rgba(10, 18, 28, 0.55), rgba(10, 18, 28, 0.55));
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
   color: #1f1f1f;
+}
+
+@media (min-width: 768px) {
+  body {
+    background-image: linear-gradient(rgba(10, 18, 28, 0.55), rgba(10, 18, 28, 0.55)),
+      url("img/brecht-corbeel-q5T423mSuWw-unsplash.jpg");
+  }
 }
 
 /* Header / Hero section */
@@ -44,6 +50,16 @@ header p {
   color: #dfeaf7;
 }
 
+.language-picker {
+  max-width: 220px;
+  margin: 24px auto 0;
+  text-align: start;
+}
+
+.language-picker .form-label {
+  color: #ffffff;
+}
+
 /* Timeline cards */
 .timeline-wrap {
   overflow-x: auto;
@@ -68,6 +84,15 @@ header p {
   width: calc((250px * 4) + (18px * 3));
   min-width: calc((250px * 4) + (18px * 3));
   padding: 0 20px 10px;
+}
+
+/* Allow the timeline to follow a right-to-left translation. */
+[dir="rtl"] .timeline {
+  direction: rtl;
+}
+
+[dir="rtl"] .timeline-heading {
+  text-align: right;
 }
 
 .timeline-card {
@@ -112,16 +137,10 @@ header p {
 }
 
 .card-details {
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: max-height 0.28s ease, opacity 0.28s ease, margin 0.28s ease;
-}
-
-.timeline-card:hover .card-details,
-.timeline-card:focus-within .card-details {
   max-height: 440px;
   opacity: 1;
+  overflow: hidden;
+  transition: max-height 0.28s ease, opacity 0.28s ease, margin 0.28s ease;
   margin-top: 8px;
 }
 
@@ -138,6 +157,110 @@ header p {
   margin: 0 0 16px;
   line-height: 1.55;
   color: #333333;
+}
+
+/* Three-column information section */
+.info-grid-section {
+  background: rgba(255, 255, 255, 0.12);
+  content-visibility: auto;
+  contain-intrinsic-size: 420px;
+}
+
+.info-panel {
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(182, 204, 232, 0.9);
+  border-radius: 16px;
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.08);
+}
+
+.info-panel h3 {
+  color: #0d1b2a;
+}
+
+.info-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  margin-bottom: 12px;
+  border-radius: 50%;
+  color: #ffffff;
+  background: #1d4e89;
+  box-shadow: 0 6px 12px rgba(13, 27, 42, 0.2);
+  font-size: 1.8rem;
+}
+
+.info-grid-section .col:nth-child(1) .info-icon {
+  background: #1d4e89;
+}
+
+.info-grid-section .col:nth-child(2) .info-icon {
+  background: #168aad;
+}
+
+.info-grid-section .col:nth-child(3) .info-icon {
+  background: #1d4e89;
+}
+
+.info-panel p {
+  color: #333333;
+  line-height: 1.55;
+}
+
+.info-panel small {
+  color: #4b5563;
+}
+
+.read-updates-button {
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 16px;
+  background: #1d4e89;
+  box-shadow: 0 6px 0 #0d1b2a, 0 10px 16px rgba(13, 27, 42, 0.25);
+  font-weight: bold;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+}
+
+.read-updates-button:hover,
+.read-updates-button:focus {
+  background: #163b68;
+  box-shadow: 0 3px 0 #08111b, 0 8px 14px rgba(13, 27, 42, 0.3);
+  transform: translateY(3px);
+}
+
+/* Subscription form */
+.subscription-section {
+  background: rgba(13, 27, 42, 0.88);
+  content-visibility: auto;
+  contain-intrinsic-size: 260px;
+}
+
+.subscription-panel {
+  max-width: 1050px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+}
+
+.subscription-panel h2 {
+  color: #0d1b2a;
+}
+
+.subscription-panel p,
+.subscription-panel small {
+  color: #4b5563;
+}
+
+.subscription-panel .btn-primary {
+  background-color: #1d4e89;
+  border-color: #1d4e89;
+}
+
+.subscription-panel .btn-primary:hover,
+.subscription-panel .btn-primary:focus {
+  background-color: #163b68;
+  border-color: #163b68;
 }
 
 @media (max-width: 675px) {
@@ -160,6 +283,7 @@ header p {
   .timeline-card {
     width: 100%;
     min-width: 0;
+    flex-basis: auto;
     margin-bottom: 20px;
   }
 }
